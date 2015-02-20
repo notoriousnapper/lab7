@@ -2,11 +2,8 @@
 /*
   This script will initialize a local Mongo database
   on your machine so you can do development work.
-
   IMPORTANT: You should make sure the
-
       local_database_name
-
   variable matches its value in app.js  Otherwise, you'll have
   initialized the wrong database.
 */
@@ -51,11 +48,10 @@ function onceClear(err) {
       console.log(to_save_count + ' left to save');
       if(to_save_count <= 0) {
         console.log('DONE');
-        // The script won't terminate until the 
+        // The script won't terminate until the
         // connection to the database is closed
         mongoose.connection.close()
       }
     });
   }
 }
-
